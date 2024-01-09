@@ -1,7 +1,15 @@
+import { Container } from "@mantine/core";
+import Footer from "../../components/footer";
+import Header from "../../components/header";
+
 const Plugins = () => {
     return (
         <div>
-            Плагины
+            <Header />
+                <Container>
+                    
+                </Container>
+            <Footer />
         </div>
     );
 };

@@ -30,7 +30,7 @@ const content =
  '';
 const Editor = () => {
     const { showContextMenu } = useContextMenu();
-        const context = useRichTextEditorContext();
+        // const context = useRichTextEditorContext();
         const editor = useEditor({
             extensions: [
                 StarterKit,
@@ -77,18 +77,18 @@ const Editor = () => {
             content,
           });
         
-          const handleImageUpload = useCallback(
-            (file: File): Promise<string> =>
-              new Promise((resolve, reject) => {
-                const formData = context;
-                formData.editor?.chain?.focus().setImage(file);
-                // api
-                //   .post("api/upload/image", formData)
-                //   .then((result) => resolve(result.data.url))
-                //   .catch(() => reject(new Error("Upload failed")));
-              }),
-            []
-          );
+          // const handleImageUpload = useCallback(
+          //   (file: File): Promise<string> =>
+          //     new Promise((resolve, reject) => {
+          //       const formData = context;
+          //       formData.editor?.chain?.focus().setImage(file);
+          //       // api
+          //       //   .post("api/upload/image", formData)
+          //       //   .then((result) => resolve(result.data.url))
+          //       //   .catch(() => reject(new Error("Upload failed")));
+          //     }),
+          //   []
+          // );
 
           return (
             <RichTextEditor editor={editor} 
@@ -172,9 +172,9 @@ const Editor = () => {
                     <RichTextEditor.Color color="#F59F00" />
                     <RichTextEditor.UnsetColor />
                 </RichTextEditor.ControlsGroup>
-            <RichTextEditor.ControlsGroup>
+            {/* <RichTextEditor.ControlsGroup>
                     <ImageControl editor={editor} handleImageUpload={handleImageUpload} />
-            </RichTextEditor.ControlsGroup>
+            </RichTextEditor.ControlsGroup> */}
               </RichTextEditor.Toolbar>
 
               <RichTextEditor.Content />

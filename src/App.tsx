@@ -10,7 +10,8 @@ import Footer from './components/footer';
 
 const routerData = createBrowserRouter([
     { path: "/", element: <Main /> },
-    { path: "/plugins", element: <Plugins /> }
+    { path: "/plugins", element: <Plugins /> },
+    { path: "/*", element: <Main />}
   ]);
 
 const App = () => {
